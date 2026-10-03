@@ -11,7 +11,7 @@ const LINKS = [
   { href: '/#ai', label: 'AI' },
 ];
 
-export function Navbar({ name }: { name: string }) {
+export function Navbar({ name, github }: { name: string; github: string | null }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -53,6 +53,15 @@ export function Navbar({ name }: { name: string }) {
         </nav>
 
         <div className="flex items-center gap-3">
+          {github && (
+            <a
+              href={github}
+              aria-label="GitHub"
+              className="hidden size-11 items-center justify-center rounded-full border border-edge text-mist transition-colors hover:border-mist hover:text-ink sm:inline-flex"
+            >
+              <Icon name="github" className="size-5" />
+            </a>
+          )}
           <Link
             href="/#contact"
             className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-void transition-colors hover:bg-cyan sm:inline-flex"

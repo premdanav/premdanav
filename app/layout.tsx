@@ -47,7 +47,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         >
           Skip to content
         </a>
-        <Navbar name={identity.shortName} />
+        <Navbar name={identity.shortName} github={identity.contact.github} />
         <main id="main">{children}</main>
         <SiteFooter />
       </body>

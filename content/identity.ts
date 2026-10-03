@@ -19,6 +19,6 @@ export const identity: Identity = {
     phone: '+917038852922',
     phoneDisplay: '+91 70388 52922',
     linkedin: 'https://www.linkedin.com/in/prem-danav',
-    github: null,
+    github: 'https://github.com/premdanav',
   },
 };

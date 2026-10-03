@@ -252,6 +252,8 @@ What exists now:
 - `/` is a single page of sections: hero (3D skills orbit), system map (3D trace
   topology), work, abilities, AI layer, experience timeline + record, skills (tier
   cards), contact (3D queue). No count-up/number cards (removed at Prem's request).
+- Repo: github.com/premdanav/premdanav (branch `main`); Pages URL
+  https://premdanav.github.io/premdanav/ (base path "/premdanav").
 - Hosting is GitHub Pages, so the site is a static export (`output: 'export'`,
   `trailingSlash: true`): no route handlers, redirects, server actions or request-time
   rendering. The deploy workflow sets `NEXT_PUBLIC_BASE_PATH` ("/<repo>" for a project
@@ -285,7 +287,6 @@ What exists now:
 
 ## Open items — ask Prem, do not guess
 
-- GitHub URL for the header link (`identity.contact.github` is `null` until then)
 - Whether to include the baby photo growth tracker (Spring Boot, S3 pre-signed
   uploads, Lambda thumbnails, React PWA) as a personal project node
 - The resume is `public/resume/Premkumar_Danav.pdf`, labelled just "Resume" on the
