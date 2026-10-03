@@ -53,10 +53,12 @@ export function ContactForm({ email }: { email: string }) {
   }
 
   return (
+    // With an endpoint the form also posts without JavaScript. Without one, JavaScript
+    // opens the email app; a mailto: form action would be flagged as an insecure target
+    // on https, and the email address is listed right beside the form anyway.
     <form
-      method="post"
-      action={CONTACT_ENDPOINT ?? `mailto:${email}`}
-      encType={CONTACT_ENDPOINT ? undefined : 'text/plain'}
+      method={CONTACT_ENDPOINT ? 'post' : undefined}
+      action={CONTACT_ENDPOINT ?? undefined}
       onSubmit={submit}
       className="flex flex-col gap-6"
     >
